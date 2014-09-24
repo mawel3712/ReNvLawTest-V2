@@ -1,0 +1,32 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" >
+    <head runat="server">
+    <title>Untitled Page</title>
+    <script type="text/javascript">
+        
+        var radioNum = 1;
+        function addRadio()
+            {
+            var radio = document.createElement("input");
+            radio.id = "radio" + radioNum; //Gotta love that loosley typed implicit conversion!!!!
+            radio.setAttribute("type", "radio");
+            radio.setAttribute("name", "radios");
+            radio.value = "myvalue";
+            //radio.setAttribute("onclick", function(){alert(this.value);});
+            document.getElementById("divRadiolist").appendChild(radio);
+            radioNum++;
+            }
+    
+    </script>
+    </head>
+    <body>
+        
+        <form id="form1" method="POST" action="#">
+        <input type="button" id="btnAddRadio" value="Add radio" onclick="addRadio();" />
+        <div id="divRadiolist"></div>
+        </div>
+    
+    </form>
+        
+    </body>
+    </html>

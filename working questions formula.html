@@ -1,0 +1,72 @@
+<div id="questionsDiv" data-answer="2">
+    
+    <!-- Question -->
+    <p>1) Which is the correct answer?:</p>
+    
+    
+    <!-- Answers in radio buttons -->
+    <input id="radioId01" type="radio" name="Answer0" value="1">
+    <label for="radioId01"> a) answer 1 </label>
+
+    <input id="radioId02" type="radio" name="Answer0" value="2">
+    <label for="radioId02"> b) answer 2 </label>
+
+    <input id="radioId03" type="radio" name="Answer0" value="3">
+    <label for="radioId03"> c) answer 3 </label>
+
+    <input id="radioId04" type="radio" name="Answer0" value="4">
+    <label for="radioId04"> d) answer 4 </label>
+
+        
+    <!-- Result Correct or incorrect -->
+    <div id="result" class="result">
+        <p></p>    
+    </div>
+</div>
+
+
+
+<!-- javascript using jQuery -->
+
+var answer = $('#questionsDiv').data('answer');
+var correctAnswer;
+var button = $('#evaluate');
+
+$('input[name=Answer0]').change(function(){
+    
+    if($(this).val() != answer){
+        
+        //incorrect answer
+        $('.result').removeClass('correct')
+        .addClass('incorrect')
+        .find('p').empty()
+        .append("The answer is wrong, please try again");
+        
+     }else if( $(this).val() == answer ){
+         
+        //correct answer
+        $('.result').css('display', 'block')
+        .removeClass('incorrect')
+        .addClass('correct')
+        .find('p').empty()
+        .append("The answer is correct");
+     }
+});
+
+
+
+<!-- css -->
+
+.result{
+    padding: 10px;
+    margin-top: 10px;
+    display: block;
+}
+.incorrect{
+    border: 1px solid red;
+    color: red;
+}
+.correct{
+    border: 1px solid green;
+    color: green;
+}
