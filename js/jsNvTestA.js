@@ -1,4 +1,4 @@
-var A1 = [3,2,1,3,0,3,3,2,3,1
+  var A1 = [3,2,1,3,0,3,3,2,3,1
          ,3,3,1,3,1,3,3,3,1,3
 
          ,1,3,2,1,2,3,3,3,1,0
@@ -8,7 +8,7 @@ var A1 = [3,2,1,3,0,3,3,2,3,1
 var QA1 = [
  
 "1)      A consumer files a complaint with the Nevada Real Estate Division claiming that complaint:", //question [0]
-
+ 
 
     "a)     The Nevada Department of Highways will be contacted by the division.", 
     "b)     The Administrator will appoint a Hearing Officer.", 
